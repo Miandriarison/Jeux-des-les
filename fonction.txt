@@ -1,0 +1,70 @@
+public Vector<String> importationcsv(String chemin) throws Exception {
+        Vector<String> lines = new Vector<String>();
+        try {
+            try (BufferedReader bf = new BufferedReader(new FileReader(chemin))) {
+                String line;
+                while ((line = bf.readLine()) != null) {
+                    lines.add(line);
+                }
+            } catch (Exception e) {
+                throw e;
+            }
+        } catch (Exception e) {
+            throw e;
+        }
+        for (int i = 0; i < lines.size(); i++) {
+            System.out.println(lines.elementAt(i));
+        }
+        return lines;
+    }
+    public static String convertToSQLDate(String inputDate) {
+         DateFormat inputDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        DateFormat outputDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            java.util.Date date = inputDateFormat.parse(inputDate);
+            String sqlDate = outputDateFormat.format(date);
+            return sqlDate;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public Recette createObject(String [] line,Vector<Discipline> discipline,Vector<Categorie> categorie){
+        Recette recette=new Recette();
+        recette.setDate(Date.valueOf(convertToSQLDate(line[0])));
+        recette.setPrix(Double.parseDouble(line[3]));
+        for (int i = 0; i < discipline.size(); i++) {
+            System.out.println(discipline.get(i).getCode() +" id "+discipline.get(i).getId());
+            if(line[4].equalsIgnoreCase(discipline.get(i).getCode())){
+                recette.setIddiscipline(discipline.get(i).getId());
+            }
+        }
+        for (int i = 0; i < categorie.size(); i++) {
+            if(line[1].equalsIgnoreCase(categorie.get(i).getType()) && line[2].equalsIgnoreCase(categorie.get(i).getCodes())){
+                recette.setIdcategorie(categorie.get(i).getId());
+            }
+        }
+        return recette;
+    }
+    
+    public void genererObjetAuto(String chemin) throws Exception {
+        try {
+            Vector<String> lines = importationcsv(chemin);
+            Connection con=new connexion.Connexion().getConnexion();
+            Vector<Discipline> discipline=object.ObjetGeneraliser.Find(con, new Discipline());
+            Vector<Categorie> categorie=object.ObjetGeneraliser.Find(con, new Categorie());
+            for (int i = 0; i < lines.size(); i++) {
+                String [] line=lines.get(i).split(";");
+                Recette res=createObject(line, discipline, categorie);
+                System.out.println(res);
+                object.ObjetGeneraliser.insert(con, res);
+            }
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+    public static void main(String [] args) throws Exception{
+        Fonction fon=new Fonction();
+        fon.genererObjetAuto("D:\\\\Fianarana\\\\S6\\\\Rojo\\\\preparartion\\\\depenses.csv");
+    }

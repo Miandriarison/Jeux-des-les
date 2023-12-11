@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>web/WEB-INF/jsp/modifierpays.jsp</url>
+            <bookmark id="1">
+                <name/>
+                <line>11</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/META-INF/context.xml</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/image.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/modifierdisciplines.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Pays.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/TableauFinal.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/supprimerProduit.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/genreiquedao/ObjetBdd.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/inscriptionutilisateur.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Categories.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/voirCalendrier.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/voirRecetteDepense.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/accueiladmin.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/loginutilisateur.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Recettes_depenses.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Athletes.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/athletes.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Calendrier.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/saisieResultat.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Utilisateur.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/saisieCalendrier.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/controller/ControllerAdmin.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Sites.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/pays.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/inportCsv.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/V_calendrier.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Resultat.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/V_recettes_depenses.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/sites.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Genre.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/modifierproduit.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/modifiersites.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/voirMedailles.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/Disciplines.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/V_resultat.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/loginadmin.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/src/java/modele/V_athletes.java</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/modifierpays.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/disciplines.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/modifierathletes.jsp</file>
+            <file>file:/C:/Users/miand/Documents/NetBeansProjects/afaka/web/WEB-INF/jsp/categories.jsp</file>
+        </group>
+    </open-files>
+</project-private>

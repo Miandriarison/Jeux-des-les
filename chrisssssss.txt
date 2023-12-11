@@ -1,0 +1,59 @@
+create table categorie(
+    id serial primary key,
+    nom varchar,
+    code varchar(3),
+    types varchar
+);
+
+INSERT INTO categorie (nom, code, types) VALUES
+    ('Hebergement', 'HEB', 'DEPENSE'),
+    ('Billeterie ', 'BIL', 'RECETTE'),
+    ('Transport', 'TRA', 'DEPENSE'),
+    ('Don', 'DON', 'RECETTE');
+
+
+create table recette_depense(
+    id serial primary key,
+    idDiscipline int,
+    idCategorie int,
+    prix numeric(10,2),
+    daty date,
+    foreign key (idDiscipline) references discipline(id),
+    foreign key (idCategorie) references categorie(id)
+);
+-- Insertion de données dans la table recette_depense
+INSERT INTO recette_depense (idDiscipline, idCategorie, prix, daty) VALUES
+    (2, 3, 120.25, '2023-08-29');
+
+    (1, 1, 100.00, '2023-08-29'),
+    (1, 2, 50.00, '2023-08-29'),
+    (1, 3, 75.50, '2023-08-29'),
+    (1, 4, 120.25, '2023-08-29');
+
+
+
+
+create view categorieVola as
+SELECT rd.*, c.nom, c.code,c.types
+FROM recette_depense rd
+JOIN categorie c ON rd.idCategorie = c.id;
+
+create view Tableau as
+SELECT cv.*, d.nom AS discipline_nom, d.type, d.code AS discipline_code
+FROM categorieVola cv
+JOIN discipline d ON cv.iddiscipline = d.id;
+
+create view TableauFinal as
+SELECT 
+    d.*,tb.daty,
+    SUM(CASE WHEN tb.types = 'RECETTE' THEN tb.prix ELSE 0 END) AS recette,
+    SUM(CASE WHEN tb.types = 'DEPENSE' THEN tb.prix ELSE 0 END) AS depense,
+    SUM(CASE WHEN tb.types = 'RECETTE' THEN tb.prix ELSE -tb.prix END) AS diff
+FROM
+    tableau tb
+JOIN
+    discipline d ON tb.iddiscipline = d.id
+GROUP BY
+    d.id,d.nom,tb.daty;
+
+

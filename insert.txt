@@ -1,0 +1,30 @@
+public void insertResultatCollectif(Resultat resultat) throws Exception {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        try {
+            Connexion connect = new Connexion();
+            connection = connect.con();
+            String query = "insert into Resultat(idDiscipline,idPays,rang) values(?,?,?)";
+            statement = connection.prepareStatement(query);
+            System.out.println("queryyyy ==" + query);
+            statement.setInt(1, resultat.getIdDiscipline());
+            statement.setInt(2, resultat.getIdPays());
+            statement.setDouble(3, resultat.getRang());
+
+            statement.executeUpdate();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            if (result != null) {
+                result.close();
+            }
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
+
+    }
