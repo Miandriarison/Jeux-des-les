@@ -105,6 +105,7 @@ public class ControllerAdmin {
                 return "saisieCalendrier";
             }
     }
+    //kokokoko
     @RequestMapping(value="/inscriptionutilisateur")
     public String inscriptionutilisateur(Model model){
         return "inscriptionutilisateur";
